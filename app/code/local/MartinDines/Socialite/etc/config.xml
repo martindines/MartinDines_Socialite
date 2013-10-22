@@ -11,6 +11,34 @@
                 <class>MartinDines_Socialite_Helper</class>
             </martindines_socialite>
         </helpers>
+        <models>
+            <martindines_socialite>
+                <class>MartinDines_Socialite_Model</class>
+                <resourceModel>martindines_socialite_resource</resourceModel>
+            </martindines_socialite>
+            <martindines_socialite_resource>
+                <class>MartinDines_Socialite_Model_Resource</class>
+                <deprecatedNode>martindines_socialite_mysql4</deprecatedNode>
+            </martindines_socialite_resource>
+        </models>
+        <resources>
+            <martindines_socialite_setup>
+                <setup>
+                    <module>MartinDines_Socialite</module>
+                    <class>MartinDines_Socialite_Model_Resource_Entity_Setup</class>
+                </setup>
+            </martindines_socialite_setup>
+            <martindines_socialite_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </martindines_socialite_read>
+            <martindines_socialite_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </martindines_socialite_write>
+        </resources>
     </global>
     <adminhtml>
         <acl>
