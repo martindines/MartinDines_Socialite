@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MartinDines_Socialite>
+            <version>0.1.0</version>
+        </MartinDines_Socialite>
+    </modules>
+    <global>
+        <helpers>
+            <martindines_socialite>
+                <class>MartinDines_Socialite_Helper</class>
+            </martindines_socialite>
+        </helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <martindines_socialite translate="title" module="martindines_socialite">
+                                            <title>MartinDines Socialite Settings</title>
+                                        </martindines_socialite>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>
