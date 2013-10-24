@@ -13,16 +13,16 @@ class MartinDines_Socialite_Model_Resource_Entity_Setup extends Mage_Eav_Model_E
                 'entity_attribute_collection' => 'catalog/category_attribute_collection',
                 'default_group'               => 'Social Integration',
                 'attributes'                  => array(
-                    'inheritance' => array(
+                    'socialite_inheritance' => array(
                         'type'       => 'int',
                         'label'      => 'Inherit from parent',
                         'input'      => 'select',
-                        'source'     => 'adminhtml/system_config_source_yesno',
+                        'source'     => 'eav/entity_attribute_source_boolean',
                         'sort_order' => 1,
                         'global'     => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
                         'group'      => 'Social Integration',
                     ),
-                    'name' => array(
+                    'socialite_items' => array(
                         'type'       => 'text',
                         'label'      => 'Social Items',
                         'input'      => 'text',
@@ -30,7 +30,7 @@ class MartinDines_Socialite_Model_Resource_Entity_Setup extends Mage_Eav_Model_E
                         'global'     => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
                         'group'      => 'Social Integration',
                     )
-                )
+                ),
             ),
             /*
             'catalog_product' => array(
